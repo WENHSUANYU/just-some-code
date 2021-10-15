@@ -19,5 +19,6 @@
         "utility": "cpp",
         "list": "cpp",
         "ostream": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "Enabled",
 }
