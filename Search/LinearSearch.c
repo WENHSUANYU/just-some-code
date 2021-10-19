@@ -1,3 +1,12 @@
+/*
+* Input
+* n: int 
+* A[]: int
+* q: int
+* the number of q: int
+* Output 
+* sum (the total repeated number): int
+*/
 #include<stdio.h>
 #include<stdlib.h>
 #define LEN 10001
