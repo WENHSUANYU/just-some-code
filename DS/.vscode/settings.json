@@ -18,7 +18,10 @@
         "bitset": "cpp",
         "utility": "cpp",
         "list": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "algorithm": "cpp",
+        "queue": "cpp",
+        "vector": "c"
     },
     "C_Cpp.errorSquiggles": "Enabled",
 }
