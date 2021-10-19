@@ -111,5 +111,6 @@ int main()
 		}
 	}
 	printList(head);
+	free(head);
 	return 0;
 }
