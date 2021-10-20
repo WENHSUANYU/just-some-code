@@ -87,7 +87,7 @@ int main() {
     int i, n, h;
     char **hash_table = (char **)malloc(M * sizeof(char *));
     for (i = 0; i < M; i++) {
-        hash_table[i] = (char *)malloc(LEN *sizeof(char));
+        hash_table[i] = (char *)malloc(LEN * sizeof(char));
     }
     
     for (i =0; i < M; i++) {
