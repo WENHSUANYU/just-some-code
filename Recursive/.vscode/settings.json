@@ -21,7 +21,8 @@
         "ostream": "cpp",
         "algorithm": "cpp",
         "queue": "cpp",
-        "vector": "c"
+        "vector": "c",
+        "cmath": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled",
 }
