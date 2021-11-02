@@ -21,7 +21,8 @@
         "ostream": "cpp",
         "algorithm": "cpp",
         "queue": "cpp",
-        "vector": "c"
+        "vector": "c",
+        "stdint.h": "c"
     },
     "C_Cpp.errorSquiggles": "Enabled",
 }
