@@ -78,6 +78,6 @@ int main(void)
 
     for(int i = 0; i < n; i++)
         print(T, Depth, i);
-
+    delete [] Depth;
     return 0;
 }
