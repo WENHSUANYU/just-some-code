@@ -8,18 +8,18 @@ class Tree{
     }travasal;
 
     public:
-    travasal T;
-    int post;
-    void Reconstruction(int l, int r)
-    {
-        if (l >= r)
-            return;
-        int root = T.pre[post++];
-        int m = distance(T.in.begin(), find(T.in.begin(), T.in.end(), root));
-        Reconstruction(l, m);
-        Reconstruction(m + 1, r);
-        T.post.push_back(root);
-    }
+        travasal T;
+        int post;
+        void Reconstruction(int l, int r)
+        {
+            if (l >= r)
+                return;
+            int root = T.pre[post++];
+            int m = distance(T.in.begin(), find(T.in.begin(), T.in.end(), root));
+            Reconstruction(l, m);
+            Reconstruction(m + 1, r);
+            T.post.push_back(root);
+        }
 };
 
 int main(void)
