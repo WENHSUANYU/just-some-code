@@ -59,6 +59,14 @@ class BST{
             preorder(r->l);
             preorder(r->r);
         }
+        void delete_node(node *r)
+        {
+            if (r == nullptr)
+                return;
+            delete_node(r->l);
+            delete_node(r->r);
+            delete r;
+        }
 };
 
 int main(void)
@@ -83,7 +91,7 @@ int main(void)
             cout << endl;
         }
     }
-    
+    tree.delete_node(tree.tree);
 
     return 0;
 }
