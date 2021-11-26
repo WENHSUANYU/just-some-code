@@ -55,5 +55,6 @@ int main(void)
     *   cin.ignore(numeric_limits<streamsize>::max(),'\n'); 
     * }
     */
+    delete [] A;
     return 0;
 }
