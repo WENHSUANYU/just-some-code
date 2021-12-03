@@ -1,5 +1,5 @@
 #include<iostream>
-
+// n <= 45
 using namespace std;
 
 int main(void)
