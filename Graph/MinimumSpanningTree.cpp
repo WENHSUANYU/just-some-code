@@ -73,5 +73,9 @@ int main(void)
 
     cout << prim(M, n) << endl;
 
+    for (int i = 0; i < n; i++) {
+        delete [] M[i];
+    }
+    delete [] M;
     return 0;
 }
