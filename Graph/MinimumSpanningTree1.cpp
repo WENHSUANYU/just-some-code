@@ -45,6 +45,11 @@ class Utility{
                 }
             }
         }
+        ~Utility()
+        {
+            delete [] parent;
+            delete [] rank;
+        }
 };
 
 class Graph{
@@ -104,6 +109,6 @@ int main(void)
     }
 
     cout << g.kruskal_mst();
-    
+
     return 0;
 }
