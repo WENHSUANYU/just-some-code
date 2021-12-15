@@ -38,10 +38,10 @@ class Utility{
                 if (rank[s1] < rank[s2])
                 {
                     parent[s1] = s2;
-                    rank[s2] += rank[s1];
                 } else {
                     parent[s2] = s1;
-                    rank[s1] += rank[s2];
+                    if (rank[s1] == rank[s2])
+                        rank[s1]++;
                 }
             }
         }
