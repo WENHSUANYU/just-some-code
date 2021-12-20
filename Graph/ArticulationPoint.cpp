@@ -10,7 +10,7 @@ class Articulation_Point{
         int n;
         int m;
         int *visit;
-        int *low;
+        int *low; //Record the minimum traversal moment
         int t;
         set <int> ap;
         Articulation_Point(int n, int m): n(n), m(m)
