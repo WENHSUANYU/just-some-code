@@ -3,16 +3,33 @@
 #include<iomanip>
 using namespace std;
 
-typedef struct{
+typedef struct Point{
     double x;
     double y;
+    Point operator+(Point &p)
+    {
+        return {x + p.x, y + p.y};
+    }
+    Point operator-(Point &p)
+    {
+        return {x - p.x, y - p.y};
+    }
+    Point operator*(double k)
+    {
+        return {x * k, y * k};
+    }
 }Point;
 
 typedef struct{
-    Point A, B;
-    double x = A.x - B.x;
-    double y = A.y - B.y;
-
+    Point p;
+    double operator*(Point &q)
+    {
+        return p.x * q.x + p.y * q.y;
+    }
+    Point operator*(double k)
+    {
+        return p = {p.x * k, p.y * k};
+    }
 }Vector;
 
 typedef struct{
@@ -35,36 +52,31 @@ class Reflection{
 
 Point Reflection::reflect(Point p)
 {
-    Point tmp = {(projection_p.x - p.x) * 2.0, (projection_p.y - p.y) * 2.0};
-    return {p.x + tmp.x, p.y + tmp.y};
+    Point tmp = (projection_p - p) * 2.0;
+    return p + tmp;
 }
 
 double Reflection::dot(Vector a, Vector b)
 {
-    return a.x * b.x + a.y * b.y;
+    return a * b.p;
 }
 
 double Reflection::norm(Vector a)
 {
-    return a.x * a.x + a.y * a.y;
+    return a * a.p;
 }
 
 void Reflection::project(Segment s, Point p)
 {
     Vector base;
-    base.A = s.B;
-    base.B = s.A;
-    base.x = base.A.x - base.B.x;
-    base.y = base.A.y - base.B.y;
-    Vector point_p;
-    point_p.A = p;
-    point_p.B = s.A;
-    point_p.x = point_p.A.x - point_p.B.x;
-    point_p.y = point_p.A.y - point_p.B.y;
-    double ratio = dot(point_p, base) / norm(base);
-    projection_p = {s.A.x + base.x * ratio, s.A.y + base.y * ratio};
-}
+    base.p = s.B - s.A;
+    Vector AtoP;
+    AtoP.p = p - s.A;
+    double ratio = dot(AtoP, base) / norm(base);
+    base.p = base * ratio;
+    projection_p = s.A + base.p;
 
+}
 
 int main(void)
 {
