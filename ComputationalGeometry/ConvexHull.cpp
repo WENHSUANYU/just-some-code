@@ -68,11 +68,13 @@ int ccw(Point p0, Point p1, Point p2)
     return 0;
 }
 //Andrew's algorithm
+//time complexity: O(nlogn)
 Polygon andrewScan(Polygon s)
 {
     Polygon u, l;
     if (s.size() < 3)
         return s;
+    //O(nlogn)
     sort(s.begin(), s.end());
 
     u.push_back(s[0]);
