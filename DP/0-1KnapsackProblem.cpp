@@ -31,7 +31,15 @@ class Knapsack{
             }
         }
         void compute(int &maxValue, vector<int> &selection);
-
+        ~Knapsack(){
+            for (int i = 0; i < N + 1; i++) {
+                delete [] C[i];
+                delete [] G[i];
+            }
+            delete [] C;
+            delete [] G;
+            delete [] items;
+        }
 };
 
 void Knapsack::compute(int &maxvalue, vector<int> &selection)
