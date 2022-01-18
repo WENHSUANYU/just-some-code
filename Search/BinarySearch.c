@@ -15,7 +15,7 @@ int binarysearch(int A[], int k, int n)
     int right = n;
     int mid;
     while (left < right) {
-        mid = (left + right) / 2;
+        mid = left + ((right - left) >> 1);
         if (k == A[mid])
             return 1;
         if (k > A[mid])
